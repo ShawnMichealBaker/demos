@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品页</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/base2.css"/>
+    <link rel="stylesheet" href="css/product.css"/>
+</head>
+<body>
+<!--顶部工具栏start-->
+<div class="shortcut clearfix">
+    <div class="w clearfix">
+        <ul class="fl">
+            <li id="city" class="dropdown city">
+                <div>
+                    送至：北京
+                    <i><s>◇</s></i>
+                </div>
+                <div id="dorpdown" class="dorpdown-layer">
+                    <ul class="site-list">
+                        <li><a href="javascript:;" class="current">北京</a></li>
+                        <li><a href="">上海</a></li>
+                        <li><a href="">天津</a></li>
+                        <li><a href="">重庆</a></li>
+                        <li><a href="">河北</a></li>
+                        <li><a href="">山西</a></li>
+                        <li><a href="">河南</a></li>
+                        <li><a href="">辽宁</a></li>
+                        <li><a href="">吉林</a></li>
+                        <li><a href="">黑龙江</a></li>
+                        <li><a href="">内蒙古</a></li>
+                        <li><a href="">江苏</a></li>
+                        <li><a href="">山东</a></li>
+                        <li><a href="">安徽</a></li>
+                        <li><a href="">浙江</a></li>
+                        <li><a href="">福建</a></li>
+                        <li><a href="">湖北</a></li>
+                        <li><a href="">湖南</a></li>
+                        <li><a href="">广东</a></li>
+                        <li><a href="">广西</a></li>
+                        <li><a href="">江西</a></li>
+                        <li><a href="">四川</a></li>
+                        <li><a href="">海南</a></li>
+                        <li><a href="">贵州</a></li>
+                        <li><a href="">云南</a></li>
+                        <li><a href="">西藏</a></li>
+                        <li><a href="">陕西</a></li>
+                        <li><a href="">甘肃</a></li>
+                        <li><a href="">青海</a></li>
+                        <li><a href="">宁夏</a></li>
+                        <li><a href="">新疆</a></li>
+                        <li><a href="">台湾</a></li>
+                        <li><a href="">香港</a></li>
+                        <li><a href="">澳门</a></li>
+                        <li><a href="">钓鱼岛</a></li>
+                        <li><a href="">海外</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <script>
+            var city = document.getElementById("city");
+            var dorpdown = document.getElementById("dorpdown");
+            city.onmouseover = function () {
+                dorpdown.style.display = "block";
+            }
+            city.onmouseout = function () {
+                dorpdown.style.display = "none";
+            }
+        </script>
+        <ul class="fr">
+            <li>
+                <a href="#">你好，请登录</a>
+                &nbsp;&nbsp;
+                <a href="#" class="col-red">免费注册</a>
+            </li>
+            <li class="spacer"></li>
+            <li><a href="#">我的订单</a></li>
+            <li class="spacer"></li>
+            <li class="dropdown"><a href="#">我的京东</a>
+                <i><s>◇</s></i>
+            </li>
+            <li class="spacer"></li>
+            <li><a href="#">京东会员</a></li>
+            <li class="spacer"></li>
+            <li><a href="#">企业采购</a></li>
+            <li class="spacer"></li>
+            <li class="dropdown tel-li">
+                <i class="tel-icon"></i>
+                <a href="#">手机京东</a>
+                <i><s>◇</s></i>
+            </li>
+            <li class="spacer"></li>
+            <li class="dropdown"><a href="#">关注京东</a>
+                <i><s>◇</s></i></li>
+            <li class="spacer"></li>
+            <li class="dropdown"><a href="#">客户服务</a>
+                <i><s>◇</s></i></li>
+            <li class="spacer"></li>
+            <li class="dropdown"><a href="#">网站导航</a>
+                <i><s>◇</s></i></li>
+        </ul>
+    </div>
+</div>
+<!--顶部工具栏end-->
+
+<!--顶部广告栏start-->
+<div class="topbanner" id="topBanner">
+    <div class="w banner-parent">
+        <a href="#"><img src="images/topbanner.jpg" alt=""/></a>
+        <a href="javascript:;" class="close-banner" id="closeBanner"></a>
+    </div>
+</div>
+<script>
+    //点击按钮关闭广告
+    //找人 按钮
+    var btn = document.getElementById("closeBanner");
+    var topBanner = document.getElementById("topBanner");
+    //注册事件
+    btn.onclick = function () {
+        topBanner.style.display = "none";
+    }
+    btn.onmouseover = function () {
+        this.style.background = "url(images/close.png) 0 -19px no-repeat"
+    }
+    btn.onmouseout = function () {
+        this.style.background = "url(images/close.png) 0 0 no-repeat"
+    }
+</script>
+<!--顶部广告栏end-->
+
+
+<!--header部分start-->
+<div class="w header">
+    <div class="logo">
+        <a href="#" class="logo-img">京东</a>
+
+        <div class="db11">
+            <a href="#"><img src="images/dong.gif" alt=""/></a>
+        </div>
+    </div>
+    <div class="search">
+        <input type="text" value="荣耀7i"/>
+        <button>搜索</button>
+    </div>
+    <div class="car">
+        <a href="#">我的购物车</a>
+        <i class="icon1"></i>
+        <i class="icon2">&gt;</i>
+        <i class="icon3">0</i>
+        <!--i.icon$*3-->
+    </div>
+    <div class="hotwords">
+        <a href="#" class="col-red">免息领券</a>
+        <a href="#">送京券</a>
+        <a href="#">多肉9.9</a>
+        <a href="#">享瘦节</a>
+        <a href="#">1折秒杀</a>
+        <a href="#">烟机灶具</a>
+        <a href="#">T恤</a>
+        <a href="#">女短袖</a>
+        <a href="#">0元试用</a>
+        <a href="#">空调清洗剂</a>
+    </div>
+</div>
+<!--header部分end-->
+
+<!--中间部分start-->
+
+<!--导航部分start-->
+<div class="nav clearfix">
+    <div class="w">
+        <div id="categories" class="categories">
+            <div class="cate-dt">
+                <a href="#">全部商品分类<i><s>◇</s></i></a>
+            </div>
+            <div id="cate" class="cate-dd">
+                <div class="cate-items">
+                    <h3><a href="#">家用电器</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">手机、数码、京东通信</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">家用电器</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">手机、数码、京东通信</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">家用电器</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">手机、数码、京东通信</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">家用电器</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">手机、数码、京东通信</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">家用电器</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">手机、数码、京东通信</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">家用电器</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">手机、数码、京东通信</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">家用电器</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">手机、数码、京东通信</a></h3>
+                    <i>&gt;</i>
+                </div>
+                <div class="cate-items">
+                    <h3><a href="#">家用电器</a></h3>
+                    <i>&gt;</i>
+                </div>
+            </div>
+        </div>
+        <div class="navitems">
+            <ul>
+                <li><a href="#">服装城</a></li>
+                <li><a href="#">美妆馆</a></li>
+                <li><a href="#">超市</a></li>
+                <li class="znq"><i></i><a href="#">全球购</a></li>
+                <li><a href="#">闪购</a></li>
+                <li><a href="#">团购</a></li>
+                <li><a href="#">拍卖</a></li>
+                <li><a href="#">金融</a></li>
+            </ul>
+        </div>
+        <div class="treasure">
+            <a href="#"><img src="images/treasure.jpg" alt=""/></a>
+        </div>
+    </div>
+</div>
+<script>
+    var categories = document.getElementById("categories");
+    categories.onmouseover = function () {
+        categories.children[1].style.display = "block";
+    }
+    categories.onmouseout = function () {
+        categories.children[1].style.display = "none";
+    }
+</script>
+<!--导航部分end-->
+
+<!--根导航start-->
+<div class="root-nav">
+    <div class="w">
+        <div class="breadcrumb">
+            <strong><a href="#">电脑、办公</a></strong>
+            <span>&nbsp;&gt;&nbsp;<a href="#">外设产品</a>&nbsp;&gt;&nbsp;<a href="#">鼠标</a>&nbsp;&gt;&nbsp;</span>
+            <span><a href="#">罗技（Logitech）</a>&nbsp;&gt;&nbsp;<a href="#">罗技G502 炫光自适应游戏鼠标</a></span>
+        </div>
+    </div>
+</div>
+<!--根导航end-->
+
+<!--产品盒子start-->
+<div class="p-box clearfix">
+    <div class="w">
+        <div class="product-intro clearfix">
+            <div class="preview">
+                <div id="box" class="spec">
+                    <div id="smallBox" class="small">
+                        <img src="images/spe01.jpg" width="350" alt=""/>
+
+                        <div id="mask" class="mask"></div>
+                    </div>
+                    <div id="bigBox" class="big">
+                        <img src="images/0001.jpg" width="800" alt=""/>
+                    </div>
+                </div>
+                <div id="specList" class="spec-list clearfix">
+                    <a href="javascript:;" id="spec-left"></a>
+                    <a href="javascript:;" id="spec-right"></a>
+                    <ul>
+                        <li><img src="images/spec01.jpg" alt="1"/></li>
+                        <li><img src="images/spec02.jpg" alt="2"/></li>
+                        <li><img src="images/spec03.jpg" alt="3"/></li>
+                        <li><img src="images/spec04.jpg" alt="4"/></li>
+                        <li><img src="images/spec05.jpg" alt="5"/></li>
+                    </ul>
+                </div>
+                <div class="short-share">
+                    <div class="fl">
+                        <span>商品编号：</span><span>2269354</span>
+                    </div>
+                    <a href="#"><i id="chooseBtnCol"></i>关注商品</a>
+                    <a href="#"><i id="shareList"></i>分享</a>
+                </div>
+            </div>
+            <div class="item-inner">
+                <div class="name">
+                    <h1>罗技（Logitech）G502 炫光自适应游戏鼠标 RGB鼠标</h1>
+
+                    <div class="p-ad">游戏鼠标中的明星之作，1680万色自定义RGB指示灯！</div>
+                </div>
+                <div class="compare">
+                    <a href="#">对比</a>
+                </div>
+                <div class="summary">
+                    <div class="summary-info">
+                        <p>累计评价</p>
+
+                        <a>15788</a>
+                    </div>
+                    <div class="summary-price">
+                        <div class="mt">京 东 价：</div>
+                        <div class="mc">
+                            <strong class="p-price">￥449.00</strong>
+                            <a href="#">(降价通知)</a>
+                        </div>
+                    </div>
+                    <div class="summary-top">
+                        <div class="mt">促销信息：</div>
+                        <div class="mc">
+                            <div class="mob">
+                                <em>手机专享价</em>
+                                <span>￥399.00</span>
+                            </div>
+                            <div class="prom">
+                                <em class="hl_red_bg">加价购</em>
+                                <em>满60.00另加49.00元，或满30.00另加19.00元，即可在购物车换购热销商品</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-support">
+                        <div class="mt">支　　持：</div>
+                        <div class="mc">
+                            <a href="#">礼品购</a>
+                        </div>
+                    </div>
+                    <div class="summary-stock">
+                        <div class="mt">配 送 至：</div>
+                        <div class="mc">支持 99元免运费 | 货到付款</div>
+                    </div>
+                    <div class="summary-service">
+                        <div class="mt">服　　务：</div>
+                        <div class="mc"> 由 京东 发货，并提供售后服务。11:10前完成下单,预计今天(07月18日)送达</div>
+                    </div>
+                </div>
+                <div class="choose">
+                    <img src="images/choose.png" alt=""/>
+                </div>
+            </div>
+            <div class="item-extra">
+                <img src="images/item-ext.jpg" alt=""/>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var box = document.getElementById("box");
+    var smallBox = document.getElementById("smallBox");
+    var mask = document.getElementById("mask");
+    var bigBox = document.getElementById("bigBox");
+    var bigImg = bigBox.children[0];
+    smallBox.onmouseover = function () {
+        mask.style.display = "block";
+        bigBox.style.display = "block";
+    }
+    smallBox.onmouseout = function () {
+        mask.style.display = "none";
+        bigBox.style.display = "none";
+    }
+    smallBox.onmousemove = function (event) {
+        var event = event || window.event;
+        var pageX = event.pageX || event.clientX + document.documentElement.scrollLeft;
+        var pageY = event.pageY || event.clientY + document.documentElement.scrollTop;
+        var boxX = pageX - box.offsetLeft;
+        var boxY = pageY - box.offsetTop;
+        var maskX = boxX - mask.offsetWidth / 2;
+        var maskY = boxY - mask.offsetHeight / 2;
+        if (maskX < 0) {
+            maskX = 0;
+        }
+        if (maskX > smallBox.offsetWidth - mask.offsetWidth) {
+            maskX = smallBox.offsetWidth - mask.offsetWidth;
+        }
+        if (maskY < 0) {
+            maskY = 0;
+        }
+        if (maskY > smallBox.offsetHeight - mask.offsetHeight) {
+            maskY = smallBox.offsetHeight - mask.offsetHeight;
+        }
+        mask.style.left = maskX + "px";
+        mask.style.top = maskY + "px";
+        var bigImgToMove = bigImg.offsetWidth - bigBox.offsetWidth;
+        var maskToMove = smallBox.offsetWidth - mask.offsetWidth;
+        var rate = bigImgToMove / maskToMove;
+        bigImg.style.left = -rate * maskX + "px";
+        bigImg.style.top = -rate * maskY + "px";
+    }
+</script>
+<script>
+    var pImg = document.getElementById("box").children[0].children[0];
+    var specList = document.getElementById("specList");
+    var specImgs = specList.getElementsByTagName("img");
+    for (var i = 0; i < specImgs.length; i++) {
+        specImgs[i].onmouseover = function () {
+            pImg.src = "images/spe0" + this.alt + ".jpg";
+        }
+    }
+</script>
+<!--产品盒子end-->
+
+<!--优惠套装start-->
+<div class="w">
+    <div class="fitting-suit"></div>
+</div>
+<!--优惠套装end-->
+
+
+<!--中间部分end-->
+
+
+<!--footer部分start-->
+<div class="footer">
+    <div class="service">
+        <div class="slogen">
+            <span class="slogen-item slogen1">
+                <img src="images/slogen1.png" alt=""/>
+            </span>
+            <span class="slogen-item slogen2">
+                <img src="images/slogen2.png" alt=""/>
+            </span>
+            <span class="slogen-item slogen3">
+                <img src="images/slogen3.png" alt=""/>
+            </span>
+            <span class="slogen-item slogen4">
+                <img src="images/slogen4.png" alt=""/>
+            </span>
+        </div>
+        <div class="w info clearfix">
+            <dl>
+                <dt>购物流程</dt>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行/团购</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">大家电</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl>
+                <dt>购物流程</dt>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行/团购</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">大家电</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl>
+                <dt>购物流程</dt>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行/团购</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">大家电</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl>
+                <dt>购物流程</dt>
+                <dd><a href="#">会员介绍</a></dd>
+                <dd><a href="#">生活旅行/团购</a></dd>
+                <dd><a href="#">常见问题</a></dd>
+                <dd><a href="#">大家电</a></dd>
+                <dd><a href="#">联系客服</a></dd>
+            </dl>
+            <dl class="last">
+                <dt>特色服务</dt>
+                <dd><a href="#">夺宝岛</a></dd>
+                <dd><a href="#">DIY装机</a></dd>
+                <dd><a href="#">延保服务</a></dd>
+                <dd><a href="#">京东E卡</a></dd>
+                <dd><a href="#">京东通信</a></dd>
+                <dd><a href="#">京东JD+</a></dd>
+            </dl>
+            <div class="coverage">
+                <div class="coverage-dt">京东自营覆盖区县</div>
+                <div class="coverage-dd">
+                    <p>京东已向全国2514个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+
+                    <p class="ar"><a href="#">查看详情&nbsp;&gt;</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w bottom">
+        <div class="links">
+            <a href="#">关于我们</a>|
+            <a href="#">联系我们</a>|
+            <a href="#">商家入驻</a>|
+            <a href="#">营销中心</a>|
+            <a href="#">手机京东</a>|
+            <a href="#">友情链接</a>|
+            <a href="#">销售联盟</a>|
+            <a href="#">京东社区</a>|
+            <a href="#">京东公益</a>|
+            <a href="#">English Site</a>|
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="copyright">
+            北京市公安局朝阳分局备案编号110105014669 | 京ICP证070359号 | 互联网药品信息服务资格证编号(京)-经营性-2014-0008 | 新出发京零 字第大120007号<br/>
+            音像制品经营许可证苏宿批005号 | 出版物经营许可证编号新出发(苏)批字第N-012号 | 互联网出版许可证编号新出网证(京)字150号<br/>
+            网络文化经营许可证京网文[2014]2148-348号 违法和不良信息举报电话：4006561155 Copyright ? 2004-2015 京东JD.com 版权所有<br/>
+            京东旗下网站：360TOP 拍拍网 网银在线
+        </div>
+        <div class="authentication">
+            <a href="#"><img src="images/auth.png" alt=""/></a>
+            <a href="#"><img src="images/auth.png" alt=""/></a>
+            <a href="#"><img src="images/auth.png" alt=""/></a>
+            <a href="#"><img src="images/auth.png" alt=""/></a>
+            <a href="#"><img src="images/auth.png" alt=""/></a>
+            <a href="#"><img src="images/auth.png" alt=""/></a>
+        </div>
+    </div>
+</div>
+<!--footer部分end-->
+
+</body>
+</html>
